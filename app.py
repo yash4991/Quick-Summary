@@ -8,7 +8,12 @@ from dotenv import load_dotenv
 # 1. Configuration
 load_dotenv()
 # Replace with your Gemini API Key or set it in a .env file
-GOOGLE_API_KEY = "api_key"
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY") or st.secrets.get("GOOGLE_API_KEY")
+
+if not GOOGLE_API_KEY:
+    st.error("API Key not found! Please set GOOGLE_API_KEY in your .env file or Streamlit Secrets.")
+    st.stop()
+    
 genai.configure(api_key=GOOGLE_API_KEY)
 
 # Initialize the model (Gemini 1.5 Flash is best for speed/cost)
