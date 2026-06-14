@@ -17,7 +17,7 @@
 ## 🛠️ Tech Stack
 
 - **Frontend/Backend:** [Streamlit](https://streamlit.io/)
-- **LLM:** [Google Gemini 1.5 Flash](https://ai.google.dev/)
+- **LLM:** [Google Gemini 2.5 Flash](https://ai.google.dev/)
 - **Scraping Engine:** [BeautifulSoup4](https://www.crummy.com/software/BeautifulSoup/) & [Requests](https://requests.readthedocs.io/)
 - **Environment Management:** `python-dotenv`
 
